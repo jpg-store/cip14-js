@@ -5,6 +5,24 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./dist/index.js": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./dist/index.d.ts": {
+      "import": "./dist/index.d.ts",
+      "require": "./dist/index.d.ts"
+    },
+    "./dist/index.js.map": {
+      "import": "./dist/index.js.map",
+      "require": "./dist/index.js.map"
+    }
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "eslint": "eslint --ext .ts,.js ./src/ --fix",
