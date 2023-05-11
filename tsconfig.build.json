@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false
+  },
+  "include": [],
+  "files": [
+    "types/blake2b.d.ts",
+    "src/index.ts"
+  ]
+}

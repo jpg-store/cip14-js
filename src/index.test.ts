@@ -1,4 +1,4 @@
-import AssetFingerprint from "../index";
+import { AssetFingerprint } from "./index.js";
 
 function createFingerprint(policyId: string, assetName: string): string {
   const fingerprint = AssetFingerprint.fromParts(

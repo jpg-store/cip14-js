@@ -1,11 +1,20 @@
 import blake2b from "blake2b";
-import { bech32 } from "bech32";
-
-/// note: this function can't be inverted due to the hash
+import type { Ctx, Blake2b } from "blake2b";
+import { bech32, BechLib, Decoded, bech32m } from "bech32";
 
 const DATA = "asset";
 
-export default class AssetFingerprint {
+export {
+  bech32,
+  blake2b,
+  type BechLib,
+  type Decoded,
+  type Ctx,
+  type Blake2b,
+  bech32m
+};
+
+export class AssetFingerprint {
   readonly hashBuf: Uint8Array;
 
   private constructor(hashBuf: Uint8Array) {
